@@ -2,25 +2,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
-    <groupId>org.swordapp</groupId>
-    <artifactId>sword2-server</artifactId>
-    <version>1.1-SNAPSHOT</version>
-    <packaging>war</packaging>
-
-    <!-- brings the sonatype snapshot repository and signing requirement on board -->
-
-    <parent>
-        <groupId>org.sonatype.oss</groupId>
-        <artifactId>oss-parent</artifactId>
-        <version>7</version>
-    </parent>
-
+    <groupId>nl.knaw.dans.easy</groupId>
+    <artifactId>easy-sword2-lib</artifactId>
+    <version>1.x-SNAPSHOT</version>
+    <packaging>jar</packaging>
     <name>SWORD v2 :: Common Server Library</name>
     <description>
         Common Server Library with interfaces to be implemented by servers
         wishing to provide SWORD v2 support
     </description>
-    <url>http://www.swordapp.org/</url>
 
     <licenses>
         <license>
@@ -29,25 +19,8 @@
             <distribution>repo</distribution>
         </license>
     </licenses>
-
-    <scm>
-        <url>git@github.com:swordapp/JavaServer2.0.git</url>
-        <developerConnection>scm:git:git@github.com:swordapp/JavaServer2.0.git</developerConnection>
-        <connection>scm:git:git@github.com:swordapp/JavaServer2.0.git</connection>
-    </scm>
-
-    <developers>
-        <developer>
-            <name>Richard Jones</name>
-            <email>swordv2@oneoverzero.com</email>
-        </developer>
-    </developers>
-
     <build>
         <plugins>
-            <plugin>
-                <artifactId>maven-release-plugin</artifactId>
-            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -99,44 +72,6 @@
                     </execution>
                 </executions>
             </plugin>
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-war-plugin</artifactId>
-                <configuration>
-                    <attachClasses>true</attachClasses>
-                    <packagingExcludes>WEB-INF/lib/*.jar</packagingExcludes>
-                    <warSourceExcludes>WEB-INF/lib/*.jar</warSourceExcludes>
-                    <webResources>
-                        <resource>
-                            <filtering>true</filtering>
-                            <directory>${basedir}/src/main/webapp</directory>
-                            <includes>
-                                <include>WEB-INF/web.xml</include>
-                            </includes>
-                        </resource>
-                    </webResources>
-                </configuration>
-                <executions>
-                    <execution>
-                        <phase>prepare-package</phase>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-gpg-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>sign-artifacts</id>
-                        <phase>verify</phase>
-                        <goals>
-                            <goal>sign</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            
         </plugins>
     </build>
 
