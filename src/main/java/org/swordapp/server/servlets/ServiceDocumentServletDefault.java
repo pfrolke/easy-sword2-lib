@@ -9,14 +9,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-public class ServiceDocumentServletDefault extends SwordServlet
-{
+public class ServiceDocumentServletDefault extends SwordServlet {
     protected ServiceDocumentManager sdm;
     protected ServiceDocumentAPI api;
 
-    public void init() throws ServletException
-    {
-		super.init();
+    public void init() throws ServletException {
+        super.init();
 
         // load the service document implementation
         this.sdm = (ServiceDocumentManager) this.loadImplClass("service-document-impl", false);
@@ -26,9 +24,7 @@ public class ServiceDocumentServletDefault extends SwordServlet
     }
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp)
-            throws ServletException, IOException
-    {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         this.api.get(req, resp);
     }
 }
