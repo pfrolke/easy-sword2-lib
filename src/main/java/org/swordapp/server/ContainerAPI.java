@@ -360,8 +360,9 @@ public class ContainerAPI extends SwordAPIEndpoint
             }
             else
             {
-                // some other sort of deposit which is not supported (shouldn't ever get here)
-                throw new SwordError(UriRegistry.ERROR_BAD_REQUEST);
+                // POST-ing additional partial deposits in a continued deposit
+                this.addDepositPropertiesFromBinary(deposit, req);
+                receipt = this.cm.addResources(iri, deposit, auth, this.config);
             }
 
             // prepare and return the response
