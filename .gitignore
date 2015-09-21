@@ -1,4 +1,5 @@
 .idea
 sword2-server.iml
 target/
-
+release.properties
+*.releaseBackup
