@@ -2,15 +2,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <groupId>nl.knaw.dans.shared</groupId>
-        <artifactId>dans-prototype</artifactId>
-        <version>1.13</version>
+        <artifactId>dans-java-prototype</artifactId>
+        <version>1.15</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <groupId>nl.knaw.dans.easy</groupId>
     <artifactId>easy-sword2-lib</artifactId>
     <version>1.x-SNAPSHOT</version>
     <packaging>jar</packaging>
-    <name>SWORD v2 :: Common Server Library</name>
+    <name>SWORD v2 Common Server Library (forked)</name>
     <description>
         Common Server Library with interfaces to be implemented by servers
         wishing to provide SWORD v2 support
@@ -26,6 +26,15 @@
             <distribution>repo</distribution>
         </license>
     </licenses>
+    <repositories>
+        <repository>
+            <id>DANS</id>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <url>https://easy.dans.knaw.nl/maven/</url>
+        </repository>
+    </repositories>
     <build>
         <plugins>
             <plugin>
