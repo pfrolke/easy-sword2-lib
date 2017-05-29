@@ -8,7 +8,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>nl.knaw.dans.easy</groupId>
     <artifactId>easy-sword2-lib</artifactId>
-    <version>1.x-SNAPSHOT</version>
+    <version>1.0-beta-3</version>
     <packaging>jar</packaging>
     <name>SWORD v2 Common Server Library (forked)</name>
     <description>
@@ -17,7 +17,7 @@
     </description>
     <scm>
         <developerConnection>scm:git:https://github.com/DANS-KNAW/${project.artifactId}</developerConnection>
-        <tag>HEAD</tag>
+        <tag>v1.0-beta-3</tag>
     </scm>
     <licenses>
         <license>
