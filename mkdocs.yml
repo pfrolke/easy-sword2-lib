@@ -26,7 +26,6 @@ nav:
   - Manual: index.md
 
 plugins:
-  - markdownextradata
   - search
 
 markdown_extensions:

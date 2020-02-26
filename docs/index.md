@@ -4,6 +4,8 @@ MANUAL
 
 This server library is an implementation of the SWORD 2.0 standard defined [here](http://swordapp.org/sword-v2/sword-v2-specifications/)
 
+This repo is forked from https://github.com/swordapp/JavaServer2.0 
+
 Use Maven Central Version
 -------------------------
 
