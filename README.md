@@ -7,4 +7,4 @@ This server library is an implementation of the SWORD 2.0 standard defined [here
 Welcome
 -------
 
-Welcome to the `easy-sword2-lib` project. See the [GitHub pages](https://dans-knaw.github.io/easy-sword2-lib/) for the manual and API documentation.
+Welcome to the `easy-sword2-lib` project. See the [GitHub pages](http://dans-knaw.github.io/easy-sword2-lib/) for the manual and API documentation.
