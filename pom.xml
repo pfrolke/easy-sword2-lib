@@ -15,6 +15,12 @@
         Common Server Library with interfaces to be implemented by servers
         wishing to provide SWORD v2 support
     </description>
+    <properties>
+        <log4j.version>1.2.17</log4j.version>
+        <abdera.version>1.1.3</abdera.version>
+        <jena.version>2.6.4</jena.version>
+        <xom.version>1.3.4</xom.version>
+    </properties>
     <scm>
         <developerConnection>scm:git:https://github.com/DANS-KNAW/${project.artifactId}</developerConnection>
         <tag>HEAD</tag>
@@ -96,7 +102,7 @@
         <dependency>
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
-            <version>1.2.17</version>
+            <version>${log4j.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>javax.mail</groupId>
@@ -119,7 +125,7 @@
         <dependency>
             <groupId>org.apache.abdera</groupId>
             <artifactId>abdera-client</artifactId>
-            <version>1.1.3</version>
+            <version>${abdera.version}</version>
         </dependency>
         <dependency>
             <groupId>commons-fileupload</groupId>
@@ -132,12 +138,12 @@
         <dependency>
             <groupId>com.hp.hpl.jena</groupId>
             <artifactId>jena</artifactId>
-            <version>2.6.4</version>
+            <version>${jena.version}</version>
         </dependency>
         <dependency>
             <groupId>xom</groupId>
             <artifactId>xom</artifactId>
-            <version>1.3.4</version>
+            <version>${xom.version}</version>
         </dependency>
     </dependencies>
 </project>
